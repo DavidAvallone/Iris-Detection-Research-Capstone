@@ -1,4 +1,5 @@
 # This code is from the NNFS textbook
+# https://github.com/DavidAvallone/nnfs_book
 
 import numpy as np
 import os
