@@ -11,5 +11,5 @@ def find_all_image_path(folder_path, extension):
         elif item.find(extension) != -1:
             find_list.append(os.path.join(folder_path, item))
 
-    print("finded image count: ",len(find_list))
+    print("found image count: ",len(find_list))
     return find_list
