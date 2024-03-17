@@ -10,9 +10,19 @@ if __name__ == "__main__":
     r_max = get_radius(parameter)
     folder_path = get_path(parameter)
     extension = get_extension(parameter)
+    output_path = get_output(parameter)
     image_paths = find_all_image_path(folder_path, extension)
 
     for image_path in image_paths:
+        print(image_path)
+        filename = os.path.basename(image_path)
+        filename_without_extension, extension = os.path.splitext(filename)
+
+        # Construct the output path using the original filename
+        output_image_path = os.path.join(output_path, filename_without_extension + ".png")
+        print(output_image_path)
+
+
         image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
         # image check
         if r_max * 2 >= image.shape[0] or r_max*2 >= image.shape[1]:
@@ -46,11 +56,16 @@ if __name__ == "__main__":
         mask = mask[y:y+h,x:x+w]
         result[mask==0] = (255,255,255)
 
+        if not os.path.exists(output_path):
+            os.makedirs(output_path)
+
 
         #cv2.imshow('result', result)
-        cv2.imwrite(image_path+"done.jpg",result)
+        cv2.imwrite(output_image_path,result)
 
  
         #key = cv2.waitKey()
         #if key == 27:
         #    break
+
+#  python main.py --r 100 --p ../CASIA-Iris-Lamp/001/L --e jpg --o ../Segmented-Casia-Iris-Lamp/001/L

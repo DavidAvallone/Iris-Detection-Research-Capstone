@@ -6,6 +6,7 @@ def make_parser():
     parser.add_argument('--r', type=int, help='iris radius, Do not bigger than image width, height!')
     parser.add_argument('--p', help='image folder path')
     parser.add_argument('--e', help='image extension. ex) bmp')
+    parser.add_argument('--o', help='Output folder path')
     return parser
 
 
@@ -19,3 +20,6 @@ def get_path(parser):
 
 def get_extension(parser):
     return parser.parse_args().e
+
+def get_output(parser):
+    return parser.parse_args().o
