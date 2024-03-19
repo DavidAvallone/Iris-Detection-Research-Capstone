@@ -13,7 +13,7 @@ for i in range(1, 11):
         output_path = os.path.join(base_output_path, "{:03d}".format(i), side)
 
         # Create task command
-        task_command = f"python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p {input_path} --e png --o {output_path} > task{i}_{side}"
+        task_command = f"python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p {input_path} --e png --o {output_path} > task{count}"
 
         # Print the task
         print(f"task{count}:\n\t{task_command}")
