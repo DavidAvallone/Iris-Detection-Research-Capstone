@@ -1,40 +1,40 @@
 task1_L:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/001\L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/001\L > task1_L
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/001/L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/001/L > task1_L
 task1_R:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/001\R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/001\R > task1_R
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/001/R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/001/R > task1_R
 task2_L:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/002\L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/002\L > task2_L
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/002/L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/002/L > task2_L
 task2_R:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/002\R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/002\R > task2_R
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/002/R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/002/R > task2_R
 task3_L:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/003\L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/003\L > task3_L
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/003/L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/003/L > task3_L
 task3_R:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/003\R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/003\R > task3_R
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/003/R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/003/R > task3_R
 task4_L:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/004\L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/004\L > task4_L
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/004/L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/004/L > task4_L
 task4_R:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/004\R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/004\R > task4_R
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/004/R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/004/R > task4_R
 task5_L:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/005\L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/005\L > task5_L
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/005/L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/005/L > task5_L
 task5_R:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/005\R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/005\R > task5_R
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/005/R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/005/R > task5_R
 task6_L:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/006\L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/006\L > task6_L
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/006/L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/006/L > task6_L
 task6_R:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/006\R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/006\R > task6_R
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/006/R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/006/R > task6_R
 task7_L:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/007\L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/007\L > task7_L
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/007/L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/007/L > task7_L
 task7_R:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/007\R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/007\R > task7_R
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/007/R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/007/R > task7_R
 task8_L:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/008\L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/008\L > task8_L
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/008/L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/008/L > task8_L
 task8_R:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/008\R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/008\R > task8_R
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/008/R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/008/R > task8_R
 task9_L:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/009\L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/009\L > task9_L
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/009/L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/009/L > task9_L
 task9_R:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/009\R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/009\R > task9_R
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/009/R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/009/R > task9_R
 task10_L:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/010\L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/010\L > task10_L
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/010/L --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/010/L > task10_L
 task10_R:
-        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/010\R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/010\R > task10_R
+        python /home/daavallone/Iris-Recognition-Research-Capstone/iris_segmentation_V3/main.py --r 100 --p /home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/010/R --e png --o /home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/010/R > task10_R
