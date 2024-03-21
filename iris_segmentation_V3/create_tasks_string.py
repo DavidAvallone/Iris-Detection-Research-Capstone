@@ -24,7 +24,7 @@ with open(output_file_path, "w") as output_file:
 
             # Write the task to the file
             output_file.write(task)
-            output_file.write(task_command.replace("\\", "/"))
+            output_file.write("\t" + task_command.replace("\\", "/"))
             count += 1
 
 print(f"Tasks written to {output_file_path}")
