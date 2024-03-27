@@ -47,7 +47,7 @@ def combine_subdirectories(main_dir):
                 os.rmdir(subdirs[1])
 
 # this was a test but i think its useless
-directory = "Segmented-CASIA-Iris-Lamp"
+directory = "Segmented-Casia-Iris-Lamp"
 combine_subdirectories(directory)
 train_files, test_files = split_dataset(directory, ratio=0.7)
 
