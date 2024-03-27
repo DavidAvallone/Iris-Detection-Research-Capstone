@@ -11,50 +11,21 @@ import PIL
 from PIL import Image
 # https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator
 
-"""
-    Split the dataset into training and testing sets.
-
-    """
-def split_dataset(directory, ratio=0.8):
-    all_files = []
-    for root, _, files in os.walk(directory):
-        for file in files:
-            if file.endswith('.jpg'):
-                file_path = os.path.join(root, file)
-                all_files.append(file_path)
-
-    random.shuffle(all_files)
-
-    split_idx = int(len(all_files) * ratio)
-    train_files = all_files[:split_idx]
-    test_files = all_files[split_idx:]
-
-    return train_files, test_files
-
-
-def combine_subdirectories(main_dir):
-    
-    for subdir in os.listdir(main_dir):
-        subdir_path = os.path.join(main_dir, subdir)
-        if os.path.isdir(subdir_path):
-            subdirs = [os.path.join(subdir_path, subsubdir) for subsubdir in os.listdir(subdir_path)]
-            if all(os.path.isdir(path) for path in subdirs):
-                for file in os.listdir(subdirs[1]):
-                    src = os.path.join(subdirs[1], file)
-                    dst = os.path.join(subdirs[0], file)
-                    shutil.move(src, dst)
-                # Remove the now empty second subdirectory
-                os.rmdir(subdirs[1])
-
-# this was a test but i think its useless
 directory = "Segmented-Casia-Iris-Lamp"
-combine_subdirectories(directory)
-train_files, test_files = split_dataset(directory, ratio=0.7)
 
-print("Number of training files:", len(train_files))
-print("Number of testing files:", len(test_files))
+checkpoint_path = "training_2/cp-{epoch:04d}.ckpt"
+checkpoint_dir = os.path.dirname(checkpoint_path)
 
 num_classes = 822
+
+batch_size = 32
+
+cp_callback = tf.keras.callbacks.ModelCheckpoint(
+    filepath = checkpoint_path,
+    verbose = 1,
+    save_weights_only = True,
+    save_freq = 5
+)
 model = models.Sequential()
 
 # increasing the size of the Conv2D layers
@@ -82,13 +53,9 @@ img_height = 480
 img_width = 640
 input_shape = (img_height, img_width, 3) 
 
-batch_size = 32
-
 train_datagen = ImageDataGenerator(
     validation_split=0.2,
     )
-
-# train_datagen.fit(train_files)
 
 train_generator = train_datagen.flow_from_directory(
     directory,
@@ -103,6 +70,8 @@ validation_generator = train_datagen.flow_from_directory(
     batch_size=batch_size,
     class_mode='sparse',
     subset='validation')
+
+model.save_weights(checkpoint_path.format(epoch=0))
 
 model.fit(
     train_generator,
