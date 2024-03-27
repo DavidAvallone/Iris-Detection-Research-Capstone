@@ -47,14 +47,14 @@ def combine_subdirectories(main_dir):
                 os.rmdir(subdirs[1])
                 
 # this was a test but i think its useless
-directory = "Smaller-Processed-CASIA-Iris-Lamp2"
+directory = "Segmented-CASIA-Iris-Lamp"
 combine_subdirectories(directory)
 train_files, test_files = split_dataset(directory, ratio=0.7)
 
 print("Number of training files:", len(train_files))
 print("Number of testing files:", len(test_files))
 
-num_classes = 200
+num_classes = 822
 model = models.Sequential()
 
 model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(480, 640, 3)))
