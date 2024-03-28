@@ -6,7 +6,7 @@ import argparse
 # the path to where the unsegmented casia lamp files are 
 # the path to where you want the segmented images to be saved
 # the path to where you want the .mf file to be saved
-def main(input, output, task_file):
+def main(input, output, task_file, num):
     # Base paths
     # base_input_path = "/home/daavallone/Iris-Recognition-Research-Capstone/CASIA-Iris-Lamp/"
     # base_output_path = "/home/daavallone/Iris-Recognition-Research-Capstone/Segmented-Casia-Iris-Lamp/"
@@ -21,7 +21,7 @@ def main(input, output, task_file):
     # Open the file in write mode
     with open(task_file, "w") as output_file:
         # Iterate over 10 tasks
-        for i in range(1, 207):
+        for i in range(1, num):
             # Iterate over "L" and "R" directories
             for side in ["L", "R"]:
                 # Generate input and output paths
@@ -44,6 +44,7 @@ if __name__ == "__main__":
     parser.add_argument("input", type=str, help="Input image directory path")
     parser.add_argument("output", type=str, help="Output image directory path")
     parser.add_argument("task_file", type=str, help=".mf file path")
+    parser.add_argument("num", type=str, help="number of tasks")
     args = parser.parse_args()
 
-    main(args.input, args.output, args.task_file)
+    main(args.input, args.output, args.task_file, args.num)
