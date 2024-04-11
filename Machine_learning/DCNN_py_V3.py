@@ -83,3 +83,4 @@ model.fit(
     validation_data=validation_generator,
     validation_steps=validation_generator.samples // batch_size,
     epochs=10)
+model.save('model3.keras')
