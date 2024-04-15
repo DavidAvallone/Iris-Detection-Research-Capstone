@@ -20,11 +20,16 @@ for subdir in os.listdir(original_dir):
         os.makedirs(new_subdir_L, exist_ok=True)
         os.makedirs(new_subdir_R, exist_ok=True)
         
-        # Move contents of 'L' and 'R' into their respective new folders
+        # Copy contents of 'L' and 'R' into their respective new folders
         for subsubdir in os.listdir(subdir_path):
             subsubdir_path = os.path.join(subdir_path, subsubdir)
             if os.path.isdir(subsubdir_path):
                 if subsubdir == 'L':
-                    shutil.move(subsubdir_path, new_subdir_L)
+                    for item in os.listdir(subsubdir_path):
+                        item_path = os.path.join(subsubdir_path, item)
+                        shutil.copy(item_path, new_subdir_L)
                 elif subsubdir == 'R':
-                    shutil.move(subsubdir_path, new_subdir_R)
+                    for item in os.listdir(subsubdir_path):
+                        item_path = os.path.join(subsubdir_path, item)
+                        shutil.copy(item_path, new_subdir_R)
+print("Completed")
