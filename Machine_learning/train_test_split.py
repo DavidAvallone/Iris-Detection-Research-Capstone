@@ -2,35 +2,36 @@ import os
 import random
 import shutil
 
-# Path to the main directory
-main_dir = "Segmented-Casia-Iris-Lamp-New"
+def copy_random_images(source_dir, dest_dir, num_images=6):
+    # Create the destination directory if it doesn't exist
+    os.makedirs(dest_dir, exist_ok=True)
+    
+    # Iterate over each subdirectory
+    for subdir in os.listdir(source_dir):
+        subdir_path = os.path.join(source_dir, subdir)
+        if os.path.isdir(subdir_path):
+            # Create a new subdirectory in the destination directory
+            dest_subdir = os.path.join(dest_dir, subdir)
+            os.makedirs(dest_subdir, exist_ok=True)
+            
+            # Get a list of all image files in the subdirectory
+            image_files = [f for f in os.listdir(subdir_path) if os.path.isfile(os.path.join(subdir_path, f))]
+            
+            # Select 6 random images (or all images if there are less than 6)
+            selected_images = random.sample(image_files, min(num_images, len(image_files)))
+            
+            # Copy the selected images to the destination directory
+            for image in selected_images:
+                image_path = os.path.join(subdir_path, image)
+                dest_path = os.path.join(dest_subdir, image)
+                shutil.copy(image_path, dest_path)
 
-# Get all subdirectories
-subdirs = [d for d in os.listdir(main_dir) if os.path.isdir(os.path.join(main_dir, d))]
+# Path to the original directory
+source_dir = 'Segmented-Casia-Iris-Lamp-New'
 
-# Shuffle subdirectories
-random.shuffle(subdirs)
+# Path to the new directory where the random images will be saved
+dest_dir = 'Segmented-Casia-Iris-Lamp-New-Test'
 
-# Get the total number of subdirectories
-num_subdirs = len(subdirs)
-
-# Ask user for the test-train split percentage
-split_percentage = float(input("Enter the test-train split percentage (e.g., 0.2 for 20%): "))
-
-# Calculate the number of subdirectories for the test set
-num_test = int(num_subdirs * split_percentage)
-
-# Create test and train directories
-test_dir = "Segmented-Casia-Iris-Lamp-New-Train"
-train_dir = "Segmented-Casia-Iris-Lamp-New-Test"
-os.makedirs(test_dir, exist_ok=True)
-os.makedirs(train_dir, exist_ok=True)
-
-# Move subdirectories to test and train directories
-for i, subdir in enumerate(subdirs):
-    if i < num_test:
-        shutil.move(os.path.join(main_dir, subdir), os.path.join(test_dir, subdir))
-    else:
-        shutil.move(os.path.join(main_dir, subdir), os.path.join(train_dir, subdir))
-
-print("Split completed successfully.")
+# Copy 6 random images from each subdirectory to the new directory
+copy_random_images(source_dir, dest_dir)
+print('Completed')
