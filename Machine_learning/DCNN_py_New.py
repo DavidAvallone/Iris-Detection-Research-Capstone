@@ -92,7 +92,7 @@ def finish_model(model, model_num, directory, batch_size):
 def main(model_num, dir):
     directory = dir
 
-    num_classes = 822
+    num_classes = 820
 
     batch_size = 32
     model = models.Sequential()
