@@ -10,7 +10,8 @@ This project utilizes iris recognition that detect and classify the iris images 
 
 # Installation Instructions
 Install Anaconda Python Environment Software
-Add open-cv, pandas, and, numpy to the environment
+python 3.9
+Add open-cv, pandas, and, numpy to the environment, pillow, keras, tensorflow
 # How to Run
 Using the environment as the kernel run the files alongside the dataset in a local directory.
 # How to Test
