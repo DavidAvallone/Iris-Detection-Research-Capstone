@@ -53,6 +53,30 @@ def model_four(model, num_classes):
     model.add(layers.Dense(num_classes, activation='softmax'))
     return model
 
+def model_five(model, num_classes):
+    model.add(layers.Conv2D(128, (3, 3), activation='relu', input_shape=(480, 640, 3)))
+    model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Conv2D(64, (3, 3), activation='relu', groups=1))
+    model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Conv2D(64, (3, 3), activation='relu', groups=1))
+    model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Conv2D(64, (3, 3), activation='relu', groups=1))
+    model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Flatten())
+    model.add(layers.Dense(128, activation='relu'))
+    model.add(layers.Dense(num_classes, activation='softmax'))
+    return model
+
+def model_six(model, num_classes):
+    model.add(layers.Conv2D(128, (3, 3), activation='relu', input_shape=(480, 640, 3)))
+    model.add(layers.Conv2D(64, (3, 3), activation='relu', groups=1))
+    model.add(layers.Conv2D(64, (3, 3), activation='relu', groups=1))
+    model.add(layers.Conv2D(64, (3, 3), activation='relu', groups=1))
+    model.add(layers.Flatten())
+    model.add(layers.Dense(128, activation='relu'))
+    model.add(layers.Dense(num_classes, activation='softmax'))
+    return model
+
 def finish_model(model, model_num, directory, batch_size):
     model.compile(optimizer='adam',
                 loss='sparse_categorical_crossentropy',
@@ -107,6 +131,10 @@ def main(model_num, dir):
         model_three(model, num_classes)
     elif(model_num == 4):
         model_four(model, num_classes)
+    elif(model_num == 5):
+        model_five(model, num_classes)
+    elif(model_num == 6):
+        model_six(model, num_classes)
     else:
         exit()
     
