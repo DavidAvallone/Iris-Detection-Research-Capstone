@@ -10,22 +10,33 @@ This project utilizes iris recognition that detect and classify the iris images 
 
 # Installation Instructions
 Install Anaconda Python Environment Software
+
 python 3.9
+
 Add open-cv, numpy, pillow, keras, tensorflow, scikit-learn, and matplotlib to the environment
 
 # How to Run
 Using the environment as the kernel run the files alongside the dataset in a local directory.
+
 Iris segmentation: 
+
 Process 1 & 2: Load up jupyter notebooks and run them block by block
+
 Process 3: run python main.py --r 100 --p /directory/containing/images --e png --o output/directory/name
 
 Machine Learning:
+
 First the dataset needs to be reformatted using the file fix_data.py there is no command line input so fix directory within file.
+
 Next run the train_test_split.py file on the output of fix_data making sure to update the directory variables in the file.
+
 Now that you have the fixed and split data you are now able to start running and training the models.
+
 Run python DCNN_py_New.py model_num training/dataset
+
 Run python smaller_models.py model_num training/dataset
 
 # How to Test
 Model Analysis:
+
 Load in keras files in the model_analysis.ipynb file and add that models architecure and run the block on the test data, see examples in the file
